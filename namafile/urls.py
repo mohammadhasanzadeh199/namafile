@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from . import frontView
 
 urlpatterns = [
+     url(r'^home/', frontView.home),
     url(r'^admin/', admin.site.urls),
 ]

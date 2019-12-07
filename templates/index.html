@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="keywords" content="video" />
+        <meta name="description" content="video analize" />
+        <link rel="shortcut icon" type="image/png" href="{% static 'pic/favicon.ico' %}"/>
+        <!-- -----------jquery----------------------------------------------- -->
+        <script src="{% static 'frontLibs/jquery.min.js' %}"></script>
+        <!-- -----------jquery-ui-------------------------------------------- -->
+        <script src="{% static 'frontLibs/jquery-ui/jquery-ui.min.js' %}"></script>
+        <link rel="stylesheet" href="{% static 'frontLibs/jquery-ui/jquery-ui.min.css' %}">
+        <!-- -----------bootstrap-------------------------------------------- -->
+        <link
+        rel="stylesheet"
+        href="{% static 'frontLibs/bootstrap-4.3.1-dist/css/bootstrap.min.css' %}"
+        />
+        <script src="{% static 'frontLibs/bootstrap-4.3.1-dist/js/bootstrap.min.js' %}"></script>
+        <!-- -----------material-icon------------------------------------- -->
+        <link href="{% static 'frontLibs/material-icon/icon.css' %}" rel="stylesheet">
+        <!-- -----------hls video palyer---------------------------------- -->
+        <script src="{% static 'frontLibs/hls.js' %}"></script>
+        <!-- -----------no ui slider-------------------------------------- -->
+        <script src="{% static 'frontLibs/noUiSlider-14.0.2/nouislider.min.js' %}"></script>
+        <!-- -----------chart js------------------------------------------ -->
+        <script src="{% static 'frontLibs/chart.js' %}"></script>
+        <!-- -----------chart js plugin----------------------------------- -->
+        <script src="{% static 'frontLibs/chartjs-plugin-doughnutlabel.min.js' %}"></script>
+        <!-- -----------project styles ----------------------------------- -->
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    </head>    
+    <body>
+        <!-- -----------content section ---------------------------------- -->
+        <div id="content">
+            {% include "content/content.html" %}
+        </div>        
+        <div class="d-none" id="sideMenuTrans"></div>
+        <!-- -----------side bar section --------------------------------- -->
+        <div id="sideMenu">
+            {% include "sidebar/sidebar.html" %}
+        </div>
+
+    </body>
+    <script src="{% static 'js/main.js' %}"></script>
+</html>
