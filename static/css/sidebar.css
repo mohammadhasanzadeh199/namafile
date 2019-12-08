@@ -1,0 +1,67 @@
+#sideMenu .logo{
+    padding: 7px;
+    width: 100%;
+    overflow: hidden;
+}
+#sideMenu .logo div {
+    padding: 0;
+    margin: 0;
+    width: max-content;
+    display: flex;
+    position: relative;
+
+}
+#sideMenu .logo span {
+    width: 42px;
+    height: 42px;
+    border-radius: 21px;
+    background-color: black;
+    display: block;
+}
+#sideMenu .logo p {
+    margin: 0;
+    margin-left: 24px;
+    flex-wrap: nowrap;
+    align-self: center;
+    color: white;
+}
+#sideMenu i.material-icons {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    color: white;
+}
+#sideMenu hr {
+    background-color: white;
+    margin: 0px 7px;
+    opacity: 0.7;
+}
+
+#sideMenu .items {
+    width: 100%;
+    height: max-content;
+    overflow: hidden;
+    margin-top: 12px;
+    /* transition: height 0.3s ease-out; */
+}
+#sideMenu .items .row-tabs {
+    width: max-content;
+    margin-left: 12px;
+    display: flex;
+}
+#sideMenu .items .row-tabs .icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    margin-right: 24px;
+    background-color: red;
+}
+#sideMenu .items .icon-c {
+    width: 36px;
+    margin-top: 10px;
+    height: 36px;
+    border-radius: 18px;
+    margin-left: 10px;
+    background-color: red;
+    transition: all 0.3s ease-out;
+}
