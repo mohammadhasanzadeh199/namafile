@@ -33,6 +33,11 @@
         <!-- -----------project styles ----------------------------------- -->
         <link rel="stylesheet" href="{% static 'css/main.css' %}">
         <link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
+        <link rel="stylesheet" href="{% static 'css/timeline.css' %}">
+        <link rel="stylesheet" href="{% static 'css/utilities.css' %}">
+        <link rel="stylesheet" href="{% static 'css/featuresError.css' %}">
+        <script src="{% static 'frontLibs/wavesurfer.js' %}"></script>
+
 
     </head>    
     <body>
@@ -45,7 +50,11 @@
         <div id="sideMenu">
             {% include "sidebar/sidebar.html" %}
         </div>
-
     </body>
+    <script src="{% static 'js/global.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/featuresError.js' %}"></script>
+    <script src="{% static 'js/timeline.js' %}"></script>
+    <script src="{% static 'js/play.js' %}"></script>
+    <script src="{% static 'js/connection.js' %}"></script>
 </html>

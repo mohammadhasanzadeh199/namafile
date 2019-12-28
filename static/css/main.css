@@ -1,27 +1,33 @@
 body{
     width: 100%;
     padding: 0;
-    padding-left: 56px;
+    padding-left: 72px;
     margin: 0;
     min-height: 100vh;
     background-color: #000000;
 }
 #sideMenu{
-    width: 56px;
+    width: 72px;
     position: fixed;
     left: 0;
     top: 0;
     background-color: #404040;
     min-height: 100vh;
+    z-index: 15;
     transition: width 0.3s ease-out;
 }
 #content{
     width: 100%;
+    padding-right: 24px;
+    padding-left: 24px;
 }
 #sideMenuTrans{
-    width: 100%;
+    width: calc(100vw - 72px);
     background-color: #929292;
     min-height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: 10;
     opacity: 0;
     transition: visibility 0s, opacity 0.3s linear;
 }

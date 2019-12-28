@@ -1,5 +1,6 @@
 #sideMenu .logo{
-    padding: 7px;
+    padding: 8px;
+    margin-top: 6px;
     width: 100%;
     overflow: hidden;
 }
@@ -11,12 +12,18 @@
     position: relative;
 
 }
-#sideMenu .logo span {
-    width: 42px;
-    height: 42px;
-    border-radius: 21px;
+#sideMenu .logo .icon-bg {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
     background-color: black;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#sideMenu .logo .icon-bg span{
+    font-size: 56px;
+    color: white;
 }
 #sideMenu .logo p {
     margin: 0;
@@ -38,30 +45,40 @@
 }
 
 #sideMenu .items {
-    width: 100%;
     height: max-content;
     overflow: hidden;
     margin-top: 12px;
+    display: flex;
+    flex-direction: column;
     /* transition: height 0.3s ease-out; */
 }
 #sideMenu .items .row-tabs {
-    width: max-content;
-    margin-left: 12px;
+    width: 300px;
     display: flex;
+    margin-bottom: 12px;
 }
-#sideMenu .items .row-tabs .icon {
-    width: 36px;
-    height: 36px;
-    border-radius: 18px;
-    margin-right: 24px;
-    background-color: red;
-}
-#sideMenu .items .icon-c {
-    width: 36px;
-    margin-top: 10px;
-    height: 36px;
-    border-radius: 18px;
-    margin-left: 10px;
-    background-color: red;
+#sideMenu .items span {
+    font-size: 36px;
+    text-align: center;
+    color: white;
     transition: all 0.3s ease-out;
+}
+#sideMenu .items .row-tabs span {
+    transition: all 0.3s ease-out;
+}
+#sideMenu .items .row-tabs span:nth-child(1) {
+    width: 72px;
+}
+#sideMenu .items .row-tabs .open-state-tabs {
+    width: 20% !important;
+    margin-left: 4%;
+}
+#sideMenu .items .col-tabs {
+    width: 72px;
+    display: flex;
+    flex-direction: column;
+}
+#sideMenu .items .col-tabs span{   
+    margin-bottom: 12px;
+    width: 100%;
 }

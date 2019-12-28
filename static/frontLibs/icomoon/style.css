@@ -1,0 +1,147 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?62jq6q');
+  src:  url('fonts/icomoon.eot?62jq6q#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?62jq6q') format('truetype'),
+    url('fonts/icomoon.woff?62jq6q') format('woff'),
+    url('fonts/icomoon.svg?62jq6q#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Audio:before {
+  content: "\e922";
+}
+.icon-Namakav:before {
+  content: "\e923";
+}
+.icon-Theme:before {
+  content: "\e924";
+}
+.icon-TimeLocation:before {
+  content: "\e925";
+}
+.icon-Video:before {
+  content: "\e926";
+}
+.icon-AudioConstant:before {
+  content: "\e900";
+}
+.icon-AudioContrast:before {
+  content: "\e901";
+}
+.icon-BlackFrame:before {
+  content: "\e902";
+}
+.icon-Blockiness:before {
+  content: "\e903";
+}
+.icon-Blooming:before {
+  content: "\e904";
+}
+.icon-Bluriness:before {
+  content: "\e905";
+}
+.icon-Brightness:before {
+  content: "\e906";
+}
+.icon-Chroma:before {
+  content: "\e907";
+}
+.icon-ChromaImbalance:before {
+  content: "\e908";
+}
+.icon-ClicksPops:before {
+  content: "\e909";
+}
+.icon-ClippingDetection:before {
+  content: "\e90a";
+}
+.icon-Colorfulness:before {
+  content: "\e90b";
+}
+.icon-ColorGamut:before {
+  content: "\e90c";
+}
+.icon-Contrast:before {
+  content: "\e90d";
+}
+.icon-Epilepsy:before {
+  content: "\e90e";
+}
+.icon-FrameDrop:before {
+  content: "\e90f";
+}
+.icon-FrameFreezing:before {
+  content: "\e910";
+}
+.icon-LetterBoxing:before {
+  content: "\e911";
+}
+.icon-LossOfChroma:before {
+  content: "\e912";
+}
+.icon-Loudness:before {
+  content: "\e913";
+}
+.icon-LoudnessMomentary:before {
+  content: "\e914";
+}
+.icon-LowLuminance:before {
+  content: "\e915";
+}
+.icon-LuminanceChange:before {
+  content: "\e916";
+}
+.icon-MOS:before {
+  content: "\e917";
+}
+.icon-Mute:before {
+  content: "\e918";
+}
+.icon-NoiseDetection:before {
+  content: "\e919";
+}
+.icon-NoiseEstimation:before {
+  content: "\e91a";
+}
+.icon-PhaseCoherence:before {
+  content: "\e91b";
+}
+.icon-PhaseDistortion:before {
+  content: "\e91c";
+}
+.icon-PillarBoxing:before {
+  content: "\e91d";
+}
+.icon-SceneChange:before {
+  content: "\e91e";
+}
+.icon-StripeNoise:before {
+  content: "\e91f";
+}
+.icon-THDN:before {
+  content: "\e920";
+}
+.icon-WindowBoxing:before {
+  content: "\e921";
+}
+.icon-cog:before {
+  content: "\e994";
+}

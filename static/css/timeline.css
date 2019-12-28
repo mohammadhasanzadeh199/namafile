@@ -1,0 +1,105 @@
+#timeline {
+    width: 100%;
+    margin-top: 70px;
+    display: flex;
+    background-color: #404040;
+    border-radius: 10px;
+}
+#timeline .interval h5 {
+    color: white;
+    margin-top: 36px;
+}
+#timeline .interval {
+    width: 250px;
+    padding-bottom: 48px;
+}
+#timeline .interval div button {
+    padding: 5px 0;
+    width: 90px;
+    margin-top: 16px;
+    outline: none;
+}
+#timeline .interval div button:nth-child(even) {
+    margin-left: 20px;
+}
+#timeline .time-index {
+    display: flex;
+    flex-wrap: nowrap;
+}
+#timeline .frame-keeper {
+    display: flex;
+    flex-wrap: nowrap;
+}
+#timeline .time-index h6{
+    padding: 20px 0;
+    color: white;
+    position: relative;
+    width: 64px;
+    text-align: center;
+}
+#timeline .time-index h6::after{
+    content: "";
+    width: 1px;
+    height: 300px;
+    z-index: 10;
+    top: 60px;
+    left: 50%;
+    border: dashed rgba(255, 255, 255, 0.3) 1px;
+    position: absolute;
+}
+#timeline .timeline-container{
+    width: calc( 100% - 250px);
+    padding-right: 12px;
+    position: relative;
+
+}
+#timeline .timeline-container .timeline-viewport {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow-x: auto;
+}
+#timeline .timeline-container .start-border {
+    height: calc(100% - 40px);
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+#timeline .timeline-container .end-border {
+    height: calc(100% - 40px);
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    right: 12px;
+    bottom: 0;
+}
+#timeline .scroll-manager{
+    width: fit-content;
+    height: 100%;
+    overflow-y: hidden;
+    position: relative;
+}
+#timeline .timeline-container .scroll-manager .cursor {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    top: 5px;
+    left: 0;
+    transition: left 0.2s linear;
+}
+#timeline .timeline-container .scroll-manager .cursor i{
+    font-size: 36px;
+    color: #cccccc;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);;
+}
+#timeline .timeline-container .scroll-manager .cursor span{
+    width: 4px;
+    height: 300px;
+    background-color: #cccccc;
+    box-shadow: black 0px 0 15px 8px;
+    margin-top: 5px;
+    z-index: 5;
+}

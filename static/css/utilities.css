@@ -1,0 +1,25 @@
+.source {
+    display: none !important;
+}
+
+.custom-sm-btn {
+    border-radius: 5px;
+    box-shadow: rgba(255, 255, 255, 0.7) 0 0 4px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: white;
+}
+
+.nama-icon-pack {
+    font-family: 'icomoon';
+}
+@font-face {
+    font-family: 'icomoon';
+    src: url('../frontLibs/icomoon/fonts/icomoon.eot');
+    src: url('../frontLibs/icomoon/fonts/icomoon.eot') format('embedded-opentype'),
+    url('../frontLibs/icomoon/fonts/icomoon.ttf') format('truetype'),
+    url('../frontLibs/icomoon/fonts/icomoon.woff') format('woff'),
+    url('../frontLibs/icomoon/fonts/icomoon.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

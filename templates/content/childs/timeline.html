@@ -1,0 +1,34 @@
+<input id="fileItem" type="file" accept="video/*"/>
+<video id="main_video_player" controls></video>
+<div id="timeline">
+    <div class="interval container">
+        <h5>Time interval</h5>
+        <div>
+            <button duration="1m" class="custom-sm-btn">1m</button>
+            <button duration="5m" class="custom-sm-btn">5m</button>
+            <button duration="15m" class="custom-sm-btn">15m</button>
+            <button duration="30m" class="custom-sm-btn">30m</button>
+            <button duration="1h" class="custom-sm-btn">1h</button>
+            <button duration="all" class="custom-sm-btn">All</button>
+        </div>
+    </div>
+    <div class="timeline-container">
+        <div class="timeline-viewport">
+            <div class="scroll-manager">
+                <div class="time-index">
+                    <h6 class="source" >00:00:00</h6>
+                </div>
+                <div class="frame-keeper">
+                    <video class="source" ></video>
+                </div>
+                <div id="waveform"></div>
+                <div class="cursor">
+                    <i class="material-icons">room</i>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <span class="start-border"></span>
+        <span class="end-border"></span>
+    </div>
+</div>
