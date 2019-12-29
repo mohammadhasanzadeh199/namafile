@@ -2,18 +2,9 @@ let frame_height = 100;
 let min_space_between_frames = 80;
 let min_space_between_indexes = 100;
 
-$("input").change(function(){ 
-    let src = URL.createObjectURL(document.getElementById('fileItem').files[0]);
-    $("video").attr("src",src);
-    __global_main_video_tag__.onloadedmetadata = function (e){
-        __global_video_duration__ = __global_main_video_tag__.duration;
-        __global_viewport_capacity__ = __global_video_duration__;
-        render();
-    }
-});
-
 
 function render(){
+    $("#timeline").removeClass("source");
     // -------- remove pre elements from last render ----------------------------------
     $("#timeline .timeline-container .frame-keeper video:not(.source)").remove();
     $("#timeline .timeline-container .time-index h6:not(.source)").remove();

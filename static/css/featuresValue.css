@@ -1,0 +1,51 @@
+#featuresValue{
+    height: auto;
+    width: 28%;
+    margin-left: 2%;
+    background-color: #404040;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+#featuresValue .fv-header{
+    display: flex;
+    border-bottom: rgba(255, 255, 255, 0.7) 1px solid;
+}
+#featuresValue .fv-header .seleceted-features{
+    flex: 2;
+    padding: 18px 0px 18px 36px; 
+    margin: 0;
+    font-weight: bold;
+    font-size: 150%;
+    color: white;
+}
+#featuresValue .fv-header .value{
+    flex: 1;
+    padding: 18px 36px 18px 0px; 
+    margin: 0;
+    font-weight: bold;
+    font-size: 150%;
+    text-align: right;
+    color: white;
+
+}
+#featuresValue .scroll-controler{
+    flex: 1;
+    position: relative;
+    overflow-y: auto;
+}
+#featuresValue .scroll-controler table{
+    position: absolute;
+}
+#featuresValue .scroll-controler table td{
+    font-size: 140%;
+    color: white;
+}
+#featuresValue .scroll-controler table td:nth-child(1){
+    padding-left: 36px;
+}
+#featuresValue .scroll-controler table td:nth-child(2){
+    padding-right: 36px;
+    text-align: right;
+}
