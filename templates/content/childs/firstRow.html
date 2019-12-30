@@ -7,7 +7,7 @@
             <button class="custom-lg-btn" duty="start" disabled>Start Analysis</button>
             <button class="custom-lg-btn" duty="import">Import File</button>
             <button class="custom-lg-btn" duty="save" disabled>Save Reports</button>
-            <button class="custom-lg-btn" duty="imformation" disabled>Imformation</button>
+            <button class="custom-lg-btn" duty="imformation"  data-toggle="modal" disabled data-target="#informationModal">Information</button>
             
         </div>
     </div>
@@ -28,3 +28,35 @@
         </div>
     </div>
 </div>
+
+<!-- <div id="informationModal">
+    <div class="im-modal">
+        <table class="table table-borderless">
+            <tbody>
+              <tr class="source">
+                <td class="key"></td>
+                <td class="value"></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div> -->
+
+<div class="modal fade" id="informationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <h5>Information</h5>
+        <table class="table table-borderless">
+            <tbody>
+              <tr class="source">
+                <td class="key"></td>
+                <td class="value"></td>
+              </tr>
+            </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

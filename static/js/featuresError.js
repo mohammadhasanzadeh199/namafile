@@ -1,6 +1,5 @@
 let active_features = [];
 let min_barcode_width = 2;
-let features_error_content_width = null;
 let num_of_barcode_sections = 150;
 let num_of_diagram_nodes = 50;
 
@@ -44,7 +43,6 @@ let chart_options = {
 //TODO: get content-width and time diuration and set to xAxsis max
 function features_error_rendering(){
     active_features = [];
-    features_error_content_width = __global_timeline_content_width__;
     $(".features-error:not(.source)").remove();
     $(".features-error.source .error-content .barcode-keeper").css("width",__global_timeline_content_width__+"px");
     $(".features-error.source .error-content .scroll-manager .diagram-keeper").css("width",__global_timeline_content_width__+"px");
@@ -72,7 +70,7 @@ function features_error_rendering(){
             options: chart_options
         });
         diagram.canvas.parentNode.style.height = '100%';
-        diagram.canvas.parentNode.style.width = content_width+'px';
+        diagram.canvas.parentNode.style.width = __global_timeline_content_width__+'px';
         source.insertBefore($(".features-error.source"));
         active_features.push({
             id: id,

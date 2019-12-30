@@ -14,4 +14,15 @@ $("#videoInput").change(function(){
 
 $("#controlCenter .control-buttons button[duty|='import']").click(function(){
     $("#videoInput").click();
-})
+});
+
+function add_video_imformation(data){
+    for (let  i=0; i<data.length; i++){
+        let element = $("#informationModal table tr.source").clone();
+        element.removeClass("source");
+        element.find(".key").text(data[i].key);
+        element.find(".value").text(data[i].value);
+        element.insertBefore("#informationModal table tr.source");
+    }
+    $("#controlCenter .control-buttons button[duty|='imformation']").prop("disabled",false);
+}

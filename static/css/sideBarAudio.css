@@ -1,5 +1,6 @@
 #sideBarAudio{
     width: 100%;
+    position: absolute;
     padding-left: 24px;
     padding-top: 20px;
 }

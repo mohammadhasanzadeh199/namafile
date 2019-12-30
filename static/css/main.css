@@ -9,6 +9,9 @@ body{
 #sideMenu{
     width: 72px;
     position: fixed;
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: column;
     left: 0;
     top: 0;
     background-color: #404040;

@@ -60,7 +60,7 @@ function init_connection(){
         console.log("close")
     };
     websocket.onmessage = function(evt) {
-        // websocket_onmessage_handler(evt);
+        websocket_onmessage_handler(evt);
         console.log(evt.data, JSON.parse(evt.data));
     };
     websocket.onerror = function(evt) {
@@ -76,32 +76,32 @@ function init_connection(){
 function websocket_onmessage_handler(evt){
     let geted_data = JSON.parse(evt.data);
     if (geted_data.type == "header"){
-        setHeader(geted_data)
-    } else if (geted_data.type == "warning"){
-        let warn_element = $(".video-container .alert-warning");
-        warn_element.text(geted_data.message);
-        warn_element.css("display","block");
-        setTimeout(() => {
-            warn_element.css("display","none");            
-        }, __backend_warning_display_timeout__);
-    }  else if (geted_data.type == "error"){
-        let error_element = $(".video-container .alert-danger");
-        error_element.text(geted_data.message);
-        error_element.css("display","block");
-        setTimeout(() => {
-            error_element.css("display","none");            
-        }, __backend_error_display_timeout__);
-    } else {
-        if (first_data_recived){
-            initPlayer();
-            first_data_recived = false;
-        }
-        console.log("recived",geted_data.data.time,stored_data.length);
-        stored_data.push(geted_data); 
-        if (inited_backend_time != "0"){
-            delay_controll(geted_data);
-        }
-    }
+        add_video_imformation(geted_data.data)}
+    // } else if (geted_data.type == "warning"){
+    //     let warn_element = $(".video-container .alert-warning");
+    //     warn_element.text(geted_data.message);
+    //     warn_element.css("display","block");
+    //     setTimeout(() => {
+    //         warn_element.css("display","none");            
+    //     }, __backend_warning_display_timeout__);
+    // }  else if (geted_data.type == "error"){
+    //     let error_element = $(".video-container .alert-danger");
+    //     error_element.text(geted_data.message);
+    //     error_element.css("display","block");
+    //     setTimeout(() => {
+    //         error_element.css("display","none");            
+    //     }, __backend_error_display_timeout__);
+    // } else {
+    //     if (first_data_recived){
+    //         initPlayer();
+    //         first_data_recived = false;
+    //     }
+    //     console.log("recived",geted_data.data.time,stored_data.length);
+    //     stored_data.push(geted_data); 
+    //     if (inited_backend_time != "0"){
+    //         delay_controll(geted_data);
+    //     }
+    // }
 }
 
 // init_connection()

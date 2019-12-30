@@ -31,3 +31,37 @@
 #controlCenter .control-buttons button:nth-child(1) {
     margin-top: 0;
 }
+
+
+#informationModal {
+    background-color: rgba(255, 255, 255, 0.35);
+}
+#informationModal .modal-dialog{
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0);
+}
+#informationModal .modal-content{
+    box-shadow: black 0 0 80px 20px;
+    background-color: #404044;
+    padding: 36px 10% 36px 10%;
+}
+#informationModal .modal-content h5{
+    font-size: 180%;
+    color: white;
+    margin-bottom: 36px;
+    margin-top: 24px;
+}
+#informationModal .modal-content table tr td{
+    font-size: 120%;
+    color: white;
+    padding: 5px 0 5px 0;
+}
+#informationModal .modal-content button{
+    position: absolute;
+    right: 36px;
+    top: 36px;
+}
+#informationModal .modal-content button span{
+    font-size: 160%;
+    color: white;
+}

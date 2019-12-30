@@ -3,8 +3,7 @@
     height: 70px;
     background-color: #404040;
     border-radius: 10px;
-    margin-top: 120px;
-    margin-bottom: 120px;
+    margin-bottom: 32px;
     display: flex;
     transition: height 0.3s ease-out;
 }
