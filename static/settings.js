@@ -57,7 +57,31 @@ __log_key_value_map__ = [
         key:"brightness",
         value:"Brightness",
         icon: "&#xe904",
-        type:"video"
+        type:"audio"
+    },
+    {
+        key:"brightness",
+        value:"Brightness",
+        icon: "&#xe906",
+        type:"audio"
+    },
+    {
+        key:"contrast",
+        value:"Contrast",
+        icon: "&#xe90d",
+        type:"audio"
+    },
+    {
+        key:"brightness",
+        value:"Brightness",
+        icon: "&#xe906",
+        type:"audio"
+    },
+    {
+        key:"contrast",
+        value:"Contrast",
+        icon: "&#xe90d",
+        type:"audio"
     },
 ]
 

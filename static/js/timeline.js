@@ -60,7 +60,7 @@ function render(){
         cursorWidth: '0'
     });
     wavesurfer.load(document.getElementsByTagName("video")[0].src);
-    // features_error_rendering($("#timeline .timeline-container .scroll-manager").width(), ["mohammad","hossein"]);
+    features_error_rendering();
     // let timeeee = 0;
     // setInterval(function(){
     //     fe_add_diagram_data("mohammad",timeeee,Math.random());

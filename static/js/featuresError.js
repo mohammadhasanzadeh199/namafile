@@ -42,23 +42,23 @@ let chart_options = {
 
 
 //TODO: get content-width and time diuration and set to xAxsis max
-function features_error_rendering(content_width, features_list){
+function features_error_rendering(){
     active_features = [];
-    features_error_content_width = content_width;
+    features_error_content_width = __global_timeline_content_width__;
     $(".features-error:not(.source)").remove();
-    $(".features-error.source .error-content .barcode-keeper").css("width",content_width+"px");
-    $(".features-error.source .error-content .scroll-manager .diagram-keeper").css("width",content_width+"px");
+    $(".features-error.source .error-content .barcode-keeper").css("width",__global_timeline_content_width__+"px");
+    $(".features-error.source .error-content .scroll-manager .diagram-keeper").css("width",__global_timeline_content_width__+"px");
 
     let gradientFill = document.getElementsByTagName("canvas")[0].getContext("2d").createLinearGradient(0, 70, 0, 200);
     gradientFill.addColorStop(0, "#bd99fd");
     gradientFill.addColorStop(1, "#320387");
-    for (let i=0;i<features_list.length;i++){
+    for (let i=0;i<__global_features_list__.length;i++){
         let source = $(".features-error.source").clone();
-        let id = "fe"+features_list[i];
+        let id = "fe"+__global_features_list__[i];
         source.removeClass("source");
         source.attr("id",id);
         source.find(".expand-controler div").click(function(){fe_click_handler(id)});
-        source.find(".expand-controler span").text(features_list[i]);
+        source.find(".expand-controler span").text(__global_features_list__[i]);
         let ctx = source.find("canvas");
 
         let diagram = new Chart(ctx, {

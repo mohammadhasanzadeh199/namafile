@@ -4,14 +4,17 @@ $("#sideMenu").click(function(){
     open_side_menu();
 });
 
+
 $("#sideMenu .items span[duty='video']").click(function(){
-    $("#sideMenu .items .row-tabs span").removeClass("active")
-    $("#sideMenu .side-bar-content").css("height","auto");
+    side_menu_items_pre_open();
+    $("#sideBarVideo").removeClass("d-none");
     $(this).addClass("active");
 })
 $("#sideMenu .items span[duty='audio']").click(function(){
-    $("#sideMenu .items .row-tabs span").removeClass("active")
+    side_menu_items_pre_open()
+    $("#sideBarAudio").removeClass("d-none");
     $("#sideMenu .items .row-tabs span[duty='audio").addClass("active");
+    
 })
 $("#sideMenu .items span[duty='setting']").click(function(){
     $("#sideMenu .items .row-tabs span").removeClass("active")
@@ -57,4 +60,12 @@ function open_side_menu(){
     setTimeout(() => {
         $("#sideMenuTrans").css("opacity","0.7");
     }, 100);
+}
+
+
+function side_menu_items_pre_open(){
+    $("#sideMenu .items .row-tabs span").removeClass("active");
+    $("#sideBarAudio").addClass("d-none");
+    $("#sideBarVideo").addClass("d-none");
+    $("#sideMenu .side-bar-content").css("height","auto");
 }
