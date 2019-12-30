@@ -8,14 +8,19 @@
 <hr/>
 <div class="items">
     <div class="row-tabs">
-        <span class="nama-icon-pack">&#xe926</span>
-        <span class="nama-icon-pack open-state-tabs">&#xe922</span>
-        <span class="nama-icon-pack open-state-tabs">&#xe994</span>
-        <span class="nama-icon-pack open-state-tabs">&#xe924</span>
+        <span class="nama-icon-pack" duty="video">&#xe926</span>
+        <span class="nama-icon-pack open-state-tabs" duty="audio">&#xe922</span>
+        <span class="nama-icon-pack open-state-tabs" duty="setting">&#xe994</span>
+        <span class="nama-icon-pack open-state-tabs" duty="theme">&#xe924</span>
     </div>
     <div class="col-tabs">
-        <span class="nama-icon-pack">&#xe922</span>
-        <span class="nama-icon-pack">&#xe994</span>
-        <span class="nama-icon-pack">&#xe924</span>
+        <span class="nama-icon-pack" duty="audio">&#xe922</span>
+        <span class="nama-icon-pack" duty="setting">&#xe994</span>
+        <span class="nama-icon-pack" duty="theme">&#xe924</span>
     </div>
+</div>
+<div class="side-bar-content">
+    <hr>
+    {% include "sidebar/childs/video.html" %}
+    {% include "sidebar/childs/video.html" %}
 </div>

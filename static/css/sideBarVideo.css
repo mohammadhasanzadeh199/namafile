@@ -1,0 +1,23 @@
+#sideBarVideo{
+    width: 100%;
+    padding-left: 24px;
+    padding-top: 20px;
+}
+#sideBarVideo .feature{
+    width: 100%;
+    display: flex;
+    padding: 14px 0;
+    align-items: center;
+}
+#sideBarVideo .feature .nama-icon-pack{
+    margin-left: 24px;
+    font-size: 28px;
+    color: white;
+    width: 50px;
+    text-align: left;
+}
+#sideBarVideo .feature h6{
+    margin: 0;
+    font-size: 20px;
+    color: white;
+}

@@ -1,39 +1,63 @@
 __log_key_value_map__ = [
     {
         key:"brightness",
-        value:"Brightness"
+        value:"Brightness",
+        icon: "&#xe906",
+        type:"video"
     },
     {
-        key:"",
-        value:""
+        key:"contrast",
+        value:"Contrast",
+        icon: "&#xe90d",
+        type:"video"
     },
     {
-        key:"",
-        value:""
+        key:"brightness",
+        value:"Brightness",
+        icon: "&#xe904",
+        type:"video"
     },
     {
-        key:"",
-        value:""
+        key:"brightness",
+        value:"Brightness",
+        icon: "&#xe904",
+        type:"video"
     },
     {
-        key:"",
-        value:""
+        key:"brightness",
+        value:"Brightness",
+        icon: "&#xe904",
+        type:"video"
     },
     {
-        key:"",
-        value:""
+        key:"brightness",
+        value:"Brightness",
+        icon: "&#xe904",
+        type:"video"
     },
     {
-        key:"",
-        value:""
+        key:"brightness",
+        value:"Brightness",
+        icon: "&#xe904",
+        type:"video"
     },
     {
-        key:"",
-        value:""
+        key:"brightness",
+        value:"Brightness",
+        icon: "&#xe904",
+        type:"video"
     },
     {
-        key:"",
-        value:""
+        key:"brightness",
+        value:"Brightness",
+        icon: "&#xe904",
+        type:"video"
+    },
+    {
+        key:"brightness",
+        value:"Brightness",
+        icon: "&#xe904",
+        type:"video"
     },
 ]
 

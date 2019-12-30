@@ -1,6 +1,6 @@
 $("#main_video_player").css("height",$("#main_video_player").width()*9/16);
 
-$("input").change(function(){ 
+$("#videoInput").change(function(){ 
     let src = URL.createObjectURL(document.getElementById('videoInput').files[0]);
     $("video").attr("src",src);
     __global_main_video_tag__.onloadedmetadata = function (e){
