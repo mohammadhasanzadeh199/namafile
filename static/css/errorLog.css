@@ -2,6 +2,7 @@
     width: 100%;
     background-color: #404040;
     border-radius: 10px;
+    margin-bottom: 32px;
 }
 #errorLog .el-header {
     display: flex;

@@ -21,7 +21,8 @@ $("#sideMenu .items span[duty='setting']").click(function(){
     $("#sideMenu .items .row-tabs span[duty='setting'").addClass("active");
 })
 $("#sideMenu .items span[duty='theme']").click(function(){
-    $("#sideMenu .items .row-tabs span").removeClass("active")
+    side_menu_items_pre_open()
+    $("#sideBarTheme").removeClass("d-none");
     $("#sideMenu .items .row-tabs span[duty='theme").addClass("active");
 })
 
@@ -68,5 +69,6 @@ function side_menu_items_pre_open(){
     $("#sideMenu .items .row-tabs span").removeClass("active");
     $("#sideBarAudio").addClass("d-none");
     $("#sideBarVideo").addClass("d-none");
+    $("#sideBarTheme").addClass("d-none");
     $("#sideMenu .side-bar-content").css("margin-left","0");
 }

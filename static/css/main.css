@@ -28,7 +28,7 @@ body{
     width: calc(100vw - 72px);
     background-color: #929292;
     min-height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     z-index: 10;

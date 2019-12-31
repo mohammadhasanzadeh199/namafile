@@ -199,6 +199,7 @@ __log_key_value_map__ = [
 //TODO:location icon shadow;
 //real checkboxes
 //timeline loader
+//add auto scroll to play.js
 // fix trasparent layer of side menu open status dimention
 
 

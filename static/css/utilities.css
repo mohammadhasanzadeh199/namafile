@@ -79,3 +79,43 @@
     border-radius: 6px;
     background-color: #404040;
 }
+
+
+.custom-radio{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.custom-radio input[type="radio"]{
+    position: absolute;
+    /* z-index: -1; */
+    width: 24px;
+    height: 24px;
+    opacity: 0;
+}
+.custom-radio span{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: solid white 2px;
+}
+.custom-radio input:checked ~ span{
+    border-color: #bd99fd;
+}
+.custom-radio input:checked ~ span::after{
+    background-color: #bd99fd;
+    content: "";
+    width: 14px;
+    position: absolute;
+    border-radius: 50%;
+    height: 14px;
+    top: 5px;
+    left: 5px;
+}
+.custom-radio h6{
+    font-size: 130%;
+    color: white;
+    margin: 0;
+    margin-left: 12px;
+}
