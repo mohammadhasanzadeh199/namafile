@@ -12,81 +12,194 @@ __log_key_value_map__ = [
         type:"video"
     },
     {
-        key:"brightness",
-        value:"Brightness",
-        icon: "&#xe904",
+        key:"chroma",
+        value:"Chroma",
+        icon: "&#xe907",
         type:"video"
     },
     {
-        key:"brightness",
-        value:"Brightness",
-        icon: "&#xe904",
+        key:"colorfulness",
+        value:"Colorfulness",
+        icon: "&#xe90b",
         type:"video"
     },
     {
-        key:"brightness",
-        value:"Brightness",
-        icon: "&#xe904",
+        key:"color_gamut",
+        value:"Color gamut",
+        icon: "&#xe90c",
         type:"video"
     },
     {
-        key:"brightness",
-        value:"Brightness",
-        icon: "&#xe904",
+        key:"chroma_imbalance",
+        value:"Chroma imbalance",
+        icon: "&#xe908",
         type:"video"
     },
     {
-        key:"brightness",
-        value:"Brightness",
-        icon: "&#xe904",
+        key:"loss_of_chroma",
+        value:"Loss of chroma",
+        icon: "&#xe912",
         type:"video"
     },
     {
-        key:"brightness",
-        value:"Brightness",
-        icon: "&#xe904",
+        key:"blurriness",
+        value:"Blurriness",
+        icon: "&#xe905",
         type:"video"
     },
     {
-        key:"brightness",
-        value:"Brightness",
-        icon: "&#xe904",
+        key:"blockiness",
+        value:"Blockiness",
+        icon: "&#xe903",
         type:"video"
     },
     {
-        key:"brightness",
-        value:"Brightness",
+        key:"noise_estimation",
+        value:"Noise estimation",
+        icon: "&#xe91a",
+        type:"video"
+    },
+    {
+        key:"stripe_noise",
+        value:"Stripe noise",
+        icon: "&#xe91f",
+        type:"video"
+    },
+    {
+        key:"scene_change",
+        value:"Scene change",
+        icon: "&#xe91e",
+        type:"video"
+    },
+    {
+        key:"blooming",
+        value:"Blooming",
         icon: "&#xe904",
         type:"audio"
     },
     {
-        key:"brightness",
-        value:"Brightness",
+        key:"frame_freezing",
+        value:"Frame freezing",
+        icon: "&#xe910",
+        type:"audio"
+    },
+    {
+        key:"black_frame",
+        value:"Black frame",
+        icon: "&#xe902",
+        type:"video"
+    },
+    {
+        key:"pillar_boxing",
+        value:"Pillar boxing",
+        icon: "&#xe91d",
+        type:"video"
+    },
+    {
+        key:"window_boxing",
+        value:"Window boxing",
+        icon: "&#xe921",
+        type:"video"
+    },
+    {
+        key:"letter_boxing",
+        value:"Letter boxing",
+        icon: "&#xe911",
+        type:"video"
+    },{
+        key:"frame_drop",
+        value:"Frame drop",
+        icon: "&#xe906",
+        type:"video"
+    },
+    {
+        //no icon
+        key:"photosensitive_epilepsy",
+        value:"Photosensitive epilepsy",
+        icon: "&#xe906",
+        type:"video"
+    },
+    {
+        //no icon
+        key:"saturated_red_epilepsy",
+        value:"Saturated red epilepsy",
+        icon: "&#xe906",
+        type:"video"
+    },
+    {
+        key:"luminance_change",
+        value:"Luminance change",
+        icon: "&#xe916",
+        type:"video"
+    },
+    {
+        key:"momentary_loudness",
+        value:"Momentary loudness",
+        icon: "&#xe914",
+        type:"audio"
+    },
+    {
+        //no icon
+        key:"integrated_loudness",
+        value:"Integrated loudness",
         icon: "&#xe906",
         type:"audio"
     },
     {
-        key:"contrast",
-        value:"Contrast",
-        icon: "&#xe90d",
-        type:"audio"
-    },
-    {
-        key:"brightness",
-        value:"Brightness",
+        //audio
+        key:"shortterm_loudness",
+        value:"Shortterm loudness",
         icon: "&#xe906",
         type:"audio"
     },
     {
-        key:"contrast",
-        value:"Contrast",
-        icon: "&#xe90d",
+        key:"loudness_range",
+        value:"Loudness range",
+        icon: "&#xe906",
         type:"audio"
+    },
+    {
+        key:"true_peak_level",
+        value:"True peak level",
+        icon: "&#xe906",
+        type:"video"
+    },
+    {
+        //no icon
+        key:"loudness_mismatch",
+        value:"Loudness mismatch",
+        icon: "&#xe906",
+        type:"audio"
+    },
+    {
+        key:"audio_contrast",
+        value:"Audio contrast",
+        icon: "&#xe901",
+        type:"audio"
+    },
+    {
+        //no icon
+        key:"audio_constant",
+        value:"Audio constant",
+        icon: "&#xe906",
+        type:"video"
+    },
+    {
+        //no icon
+        key:"mute_detection",
+        value:"Mute detection",
+        icon: "&#xe906",
+        type:"video"
     },
 ]
 
 
 
+
+//TODO:location icon shadow;
+//real checkboxes
+//timeline loader
+// fix trasparent layer of side menu open status dimention
 
 
 

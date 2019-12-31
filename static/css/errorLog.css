@@ -1,0 +1,34 @@
+#errorLog {
+    width: 100%;
+    background-color: #404040;
+    border-radius: 10px;
+}
+#errorLog .el-header {
+    display: flex;
+    padding: 0 5%;
+    width: 100%;
+    border-bottom: white 2px solid;
+}
+#errorLog .el-header p {
+    padding: 1% 0;
+    margin: 0;
+    flex: 1;
+    color: white;
+    font-size: 140%;
+}
+#errorLog .scroll-controler{
+    width: 100%;
+    height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#errorLog .scroll-controler div{
+    display: flex;
+    padding: 16px 5%;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+#errorLog .scroll-controler div span{
+    flex:1;
+    color: white;
+    font-size: 120%;
+}

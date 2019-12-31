@@ -50,6 +50,7 @@ function render(){
         time+= time_interval;
         index.insertBefore($("#timeline .timeline-container .time-index .source"));
     }
+    $("#timeline .timeline-container .cursor").css("left",-$("#timeline .timeline-container .cursor").width()/2+"px")
     // -------- wave form renderer ----------------------------------------------------
     var wavesurfer = WaveSurfer.create({
         container: '#waveform',
@@ -126,4 +127,4 @@ $("#timeline .interval button").click(function(){
         alert("that's right!");
         render();
     }
-})
+});

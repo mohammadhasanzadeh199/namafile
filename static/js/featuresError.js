@@ -19,10 +19,13 @@ let chart_options = {
             },
             gridLines: {
                 scaleLabel:false,
+                zeroLineColor:"#bd99fd",
+                color:"rgba(255,255,255,0.2)"
             },
         }],
         xAxes: [{
             ticks: {
+                display:false,
                 min:0,
                 max:100,
                 stepSize: 5
@@ -46,7 +49,7 @@ function features_error_rendering(){
     $(".features-error:not(.source)").remove();
     $(".features-error.source .error-content .barcode-keeper").css("width",__global_timeline_content_width__+"px");
     $(".features-error.source .error-content .scroll-manager .diagram-keeper").css("width",__global_timeline_content_width__+"px");
-
+    __global_features_list__.length?$("#featuresErrorSectionTitile").removeClass("d-none"):null;
     let gradientFill = document.getElementsByTagName("canvas")[0].getContext("2d").createLinearGradient(0, 70, 0, 200);
     gradientFill.addColorStop(0, "#bd99fd");
     gradientFill.addColorStop(1, "#320387");
@@ -69,7 +72,7 @@ function features_error_rendering(){
             },
             options: chart_options
         });
-        diagram.canvas.parentNode.style.height = '100%';
+        // diagram.canvas.parentNode.style.height = '100%';
         diagram.canvas.parentNode.style.width = __global_timeline_content_width__+'px';
         source.insertBefore($(".features-error.source"));
         active_features.push({
