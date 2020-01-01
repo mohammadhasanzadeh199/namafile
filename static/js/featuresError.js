@@ -84,6 +84,7 @@ function features_error_rendering(){
             pre_time:0
         });
     }
+    $(".features-error .error-content .scroll-manager .cursor").css("left",-$(".features-error .error-content .scroll-manager .cursor").width()/2+"px")
 }
 
 
