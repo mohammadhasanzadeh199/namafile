@@ -1,3 +1,5 @@
+let websocket = null;
+
 let send_json = {
     "Video_addr":"C:\\Users\\Administrator\\namafile\\videos\\video30.mp4",
     "brightness":"1",
@@ -53,7 +55,6 @@ function init_connection(){
     websocket = new WebSocket("ws://213.233.161.125:8007/");
     websocket.onopen = function(evt) { 
         console.log("open")
-        websocket.send("initialize:"+JSON.stringify(send_json));
     };
     websocket.onclose = function(evt) { 
         // init_connection();
@@ -61,14 +62,15 @@ function init_connection(){
     };
     websocket.onmessage = function(evt) {
         websocket_onmessage_handler(evt);
-        console.log(evt.data, JSON.parse(evt.data));
     };
     websocket.onerror = function(evt) {
-        console.log("error",evt)
+        console.log("error",evt);
     };
 }
 
-
+function send_inital_message(){
+    websocket.send("initialize:"+JSON.stringify(send_json));
+}
 
 // ====================================================================================================================
 // ------- websocket given data handler (check is header or log data) -------------------------------------------------
@@ -76,32 +78,28 @@ function init_connection(){
 function websocket_onmessage_handler(evt){
     let geted_data = JSON.parse(evt.data);
     if (geted_data.type == "header"){
-        add_video_imformation(geted_data.data)}
-    // } else if (geted_data.type == "warning"){
-    //     let warn_element = $(".video-container .alert-warning");
-    //     warn_element.text(geted_data.message);
-    //     warn_element.css("display","block");
-    //     setTimeout(() => {
-    //         warn_element.css("display","none");            
-    //     }, __backend_warning_display_timeout__);
-    // }  else if (geted_data.type == "error"){
-    //     let error_element = $(".video-container .alert-danger");
-    //     error_element.text(geted_data.message);
-    //     error_element.css("display","block");
-    //     setTimeout(() => {
-    //         error_element.css("display","none");            
-    //     }, __backend_error_display_timeout__);
-    // } else {
-    //     if (first_data_recived){
-    //         initPlayer();
-    //         first_data_recived = false;
-    //     }
-    //     console.log("recived",geted_data.data.time,stored_data.length);
-    //     stored_data.push(geted_data); 
-    //     if (inited_backend_time != "0"){
-    //         delay_controll(geted_data);
-    //     }
-    // }
+        add_video_imformation(geted_data.data)
+    } else if (geted_data.type == "warning"){
+        // let warn_element = $(".video-container .alert-warning");
+        // warn_element.text(geted_data.message);
+        // warn_element.css("display","block");
+        // setTimeout(() => {
+        //     warn_element.css("display","none");            
+        // }, __backend_warning_display_timeout__);
+    }  else if (geted_data.type == "error"){
+        // let error_element = $(".video-container .alert-danger");
+        // error_element.text(geted_data.message);
+        // error_element.css("display","block");
+        // setTimeout(() => {
+        //     error_element.css("display","none");            
+        // }, __backend_error_display_timeout__);
+    } else {
+        sotore_data_in_db(geted_data).then(function(result){
+            if (result){
+                fe_add_log_to_diagram(geted_data);
+            }
+        });
+    }
 }
 
-// init_connection()
+init_connection()

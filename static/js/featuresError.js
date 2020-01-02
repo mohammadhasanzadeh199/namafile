@@ -6,6 +6,9 @@ let num_of_diagram_nodes = 50;
 //TODO: set contenet_width and duration
 
 let chart_options = {
+    tooltips:{
+        enabled:false,
+    },
     legend:{
         display:false
     },
@@ -88,7 +91,16 @@ function features_error_rendering(){
 }
 
 
+function fe_add_log_to_diagram(log){
+    for (let i=0; i<log.data.length; i++){
+        if (__global_features_list__.includes(log.data[i].key)){
+            fe_add_diagram_data(log.data[i].key,log.data_time,log.data[i].value);
+        }
+    }
+}
+
 function fe_add_diagram_data( feature_name, time, value ){
+    console.log(feature_name, time, value )
     let id = "fe"+feature_name;
     let feature = null;
     for (let i=0; i<active_features.length;i++){
@@ -98,7 +110,8 @@ function fe_add_diagram_data( feature_name, time, value ){
     }
     if ( feature!=null ){
         let diff = time - feature.pre_time;
-        let min_diff = $("#"+id+" .barcode-keeper").width() /__global_timeline_content_width__ * __global_video_duration__ /num_of_diagram_nodes;
+        // let min_diff = $("#"+id+" .barcode-keeper").width() /__global_timeline_content_width__ * __global_video_duration__ /num_of_diagram_nodes;
+        let min_diff = 0.5;
         console.log("noeee",min_diff,diff)
         if ( diff >= min_diff ){
             let new_value = ( feature.nodes_sum + value )/( feature.nodes_num + 1 );

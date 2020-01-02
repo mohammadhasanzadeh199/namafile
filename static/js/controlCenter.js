@@ -16,6 +16,10 @@ $("#controlCenter .control-buttons button[duty|='import']").click(function(){
     $("#videoInput").click();
 });
 
+$("#controlCenter .control-buttons button[duty|='start']").click(function(){
+    send_inital_message();
+});
+
 function add_video_imformation(data){
     for (let  i=0; i<data.length; i++){
         let element = $("#informationModal table tr.source").clone();

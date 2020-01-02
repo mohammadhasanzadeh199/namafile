@@ -106,7 +106,8 @@ __log_key_value_map__ = [
         value:"Letter boxing",
         icon: "&#xe911",
         type:"video"
-    },{
+    },
+    {
         key:"frame_drop",
         value:"Frame drop",
         icon: "&#xe906",
