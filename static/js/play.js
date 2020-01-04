@@ -20,19 +20,8 @@ $("#timeline .timeline-container .scroll-manager .click-area").click(function(ev
 })
 
 function play_data(){
-    let start = __global_main_video_tag__.currentTime -0.3;
-    let end = __global_main_video_tag__.currentTime + 0.3;
-    get_range_data_from_db (start,end).then(function (data){
-        let index = 0;
-        let diff;
-        for (let i=0; i<data.lenght; i++){
-            let new_diff = Math.abs(__global_main_video_tag__.currentTime - data[i].data_time);
-            if (!diff||new_diff>diff){
-                diff = new_diff;
-                index = i;
-            }
-        }
-        show_features_value(data[index].data);
+    get_closest_data_from_db (__global_main_video_tag__.currentTime).then(function (data){
+        show_features_value(data.data);
     })
 }
 

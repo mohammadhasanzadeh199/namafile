@@ -19,6 +19,9 @@
     margin-top: 16px;
     outline: none;
 }
+#timeline .interval div button:disabled {
+    color: #aaa !important;
+}
 #timeline .interval div button:nth-child(even) {
     margin-left: 20px;
 }

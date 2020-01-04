@@ -36,16 +36,6 @@ function db_upgrade(event){
     }
 }
 
-let first_one = true;
-let first_data = null;
-
-$("#errorLog .el-header p").click(function(){
-    // console.log("clicked",first_data);
-    // get_exact_data_from_db(first_data).then(function(result){
-    //     console.log("result");
-    // })
-    get_range_data_from_db(0,0.5);
-});
 
 function sotore_data_in_db(log_data){
     return new Promise(function(resolve,reject){
@@ -55,10 +45,6 @@ function sotore_data_in_db(log_data){
             data: log_data.data
         });
         request.onsuccess = function(event){
-            if (first_one){
-                first_one = false;
-                first_data = log_data.data_time;    
-            }
             resolve(true);
         }
         request.onerror = function(event){
@@ -98,6 +84,69 @@ function get_range_data_from_db(start_time,end_time){
         }
         transaction.onerror = function(event){
             reject(null);
+        }
+    });
+}
+
+
+function get_closest_data_from_db( time ){
+    let befor = null;
+    let after = null;
+    let befor_diff = null;
+    let after_diff = null;
+    return new Promise(function (resolve,reject){
+        let lower_bound = IDBKeyRange.lowerBound(time);
+        let upper_bound = IDBKeyRange.upperBound(time);
+        let objectStore = db.transaction(object_store_name,"readonly").objectStore(object_store_name);  
+        let index = objectStore.index("data_time");
+        let transaction = index.openCursor(lower_bound);
+        transaction.onsuccess = function(event){
+            cursor = event.target.result;
+            if (cursor){
+                after = JSON.parse(JSON.stringify(cursor.value));
+                after_diff = after==null ? null : Math.abs(time-after.data_time);
+            }
+            second_transaction = index.openCursor(upper_bound);
+            second_transaction.onsuccess = function(event){
+                cursor = event.target.result;
+                if (cursor){
+                    befor = JSON.parse(JSON.stringify(cursor.value));
+                    befor_diff = befor==null ? null : Math.abs(time-befor.data_time);
+                }
+                if (befor_diff == null && after_diff == null){
+                    reject(null);
+                } else if (befor_diff == null) {
+                    resolve(after)
+                } else if (after_diff == null) {
+                    resolve(befor)
+                } else {
+                    resolve(befor_diff < after_diff ? befor : after);
+                }
+            }
+        }
+    })   
+}
+
+
+
+function remote_get_data_from_db(start_border, bridge_func ,is_reverse){
+    return new Promise(function (resolve,reject){
+        let bound = null;
+        if (is_reverse){
+            bound = IDBKeyRange.upperBound(start_border);
+        } else {
+            bound = IDBKeyRange.lowerBound(start_border);
+        }
+        let objectStore = db.transaction(object_store_name,"readonly").objectStore(object_store_name);  
+        let index = objectStore.index("data_time");
+        let transaction = index.openCursor(bound);
+        transaction.onsuccess = function(event){
+            let cursor = event.target.result;
+            if(cursor && bridge_func(JSON.parse(JSON.stringify(cursor.value)))){
+                cursor.continue();
+            } else {
+                resolve(true);
+            }
         }
     });
 }

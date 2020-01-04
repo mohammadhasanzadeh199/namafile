@@ -72,6 +72,7 @@ function send_inital_message(){
     websocket.send("initialize:"+JSON.stringify(send_json));
 }
 
+let doFirst = true;
 // ====================================================================================================================
 // ------- websocket given data handler (check is header or log data) -------------------------------------------------
 // ====================================================================================================================
@@ -97,6 +98,13 @@ function websocket_onmessage_handler(evt){
         sotore_data_in_db(geted_data).then(function(result){
             if (result){
                 fe_add_log_to_diagram(geted_data);
+            }
+            if (geted_data.islast == 1&&doFirst){
+                doFirst = false;
+                add_error_logs()
+                // log_extractor(0,10).then(function(result){
+                //     console.log("errrrrrrrrrror",result);
+                // })
             }
         });
     }

@@ -18,6 +18,7 @@ $("#controlCenter .control-buttons button[duty|='import']").click(function(){
 
 $("#controlCenter .control-buttons button[duty|='start']").click(function(){
     send_inital_message();
+    history_obj_creator();
 });
 
 function add_video_imformation(data){

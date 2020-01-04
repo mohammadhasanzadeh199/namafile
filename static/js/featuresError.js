@@ -12,6 +12,11 @@ let chart_options = {
     legend:{
         display:false
     },
+    elements: {
+        point:{
+            radius: 0
+        }
+    },
     maintainAspectRatio: false,
     scales: {
         yAxes: [{
@@ -64,7 +69,7 @@ function features_error_rendering(){
         source.find(".expand-controler div").click(function(){fe_click_handler(id)});
         source.find(".expand-controler span").text(__global_features_list__[i]);
         let ctx = source.find("canvas");
-
+        chart_options.scales.xAxes[0].ticks.max = __global_timeline_content_width__
         let diagram = new Chart(ctx, {
             type: 'line',
             data: {
@@ -100,7 +105,6 @@ function fe_add_log_to_diagram(log){
 }
 
 function fe_add_diagram_data( feature_name, time, value ){
-    console.log(feature_name, time, value )
     let id = "fe"+feature_name;
     let feature = null;
     for (let i=0; i<active_features.length;i++){
@@ -112,11 +116,11 @@ function fe_add_diagram_data( feature_name, time, value ){
         let diff = time - feature.pre_time;
         // let min_diff = $("#"+id+" .barcode-keeper").width() /__global_timeline_content_width__ * __global_video_duration__ /num_of_diagram_nodes;
         let min_diff = 0.5;
-        console.log("noeee",min_diff,diff)
         if ( diff >= min_diff ){
+            console.log(time * __global_timeline_content_width__/__global_video_duration__, time, __global_timeline_content_width__, __global_video_duration__)
             let new_value = ( feature.nodes_sum + value )/( feature.nodes_num + 1 );
             feature.diagram.data.datasets[0].data.push({
-                x:time,
+                x: time * __global_timeline_content_width__/__global_video_duration__,
                 y:new_value
             });
             feature.diagram.update();
@@ -131,8 +135,8 @@ function fe_add_diagram_data( feature_name, time, value ){
 function fe_add_barcode_data( feature_name, start, end ){
     let id = "fe"+feature_name;
     let diff = end - start;
-    let min_diff = $("#"+id+" .barcode-keeper").width() /__global_timeline_content_width__ * __global_video_duration__ /num_of_barcode_sections;
-    console.log(diff,min_diff)
+    // let min_diff = $("#"+id+" .barcode-keeper").width() /__global_timeline_content_width__ * __global_video_duration__ /num_of_barcode_sections;
+    min_diff = 0.1;
     if ( diff >= min_diff ){
         let elem = $("#"+id+" .error-content .scroll-manager .barcode-keeper .error.source").clone();
         elem.removeClass("source");
@@ -143,7 +147,6 @@ function fe_add_barcode_data( feature_name, start, end ){
 
 }
 
-//TODO: closing action
 function fe_click_handler(id){
     let index = 0;
     for (let i=0; i<active_features.length; i++){

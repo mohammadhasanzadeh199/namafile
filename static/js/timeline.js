@@ -10,6 +10,7 @@ function render(){
     $("#timeline .timeline-container .time-index h6:not(.source)").remove();
     $("#waveform").empty();
     // -------- render frames ---------------------------------------------------------
+    initialize_timeline_buttons();
     width = __global_main_video_tag__.videoWidth;
     height = __global_main_video_tag__.videoHeight;
     let container_width = $("#timeline .timeline-container .timeline-viewport").width();
@@ -83,6 +84,27 @@ function timeWrapper(time){
     let hour = Math.floor(time/3600);
     
     return time_digit(hour)+":"+time_digit(min)+":"+time_digit(second);
+}
+
+
+function initialize_timeline_buttons(){
+    $("#timeline .interval button").prop("disabled",true);
+    $("#timeline .interval button[duration|='all'").prop("disabled",false);
+    if (__global_video_duration__>=60){
+        $("#timeline .interval button[duration|='1m']").prop("disabled",false);
+    }
+    if (__global_video_duration__>=300){
+        $("#timeline .interval button[duration|='5m']").prop("disabled",false);
+    }
+    if (__global_video_duration__>=900){
+        $("#timeline .interval button[duration|='15m']").prop("disabled",false);
+    }
+    if (__global_video_duration__>=1800){
+        $("#timeline .interval button[duration|='30m']").prop("disabled",false);
+    }
+    if (__global_video_duration__>=3600){
+        $("#timeline .interval button[duration|='1h']").prop("disabled",false);
+    }
 }
 
 

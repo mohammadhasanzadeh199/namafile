@@ -201,8 +201,9 @@ __log_key_value_map__ = [
 //real checkboxes
 //timeline loader
 //add auto scroll to play.js
-// fix trasparent layer of side menu open status dimention
-
+// log system
+// selectiong faetures functionality
+//ui inhanced
 
 
 // =============================================================================================================
