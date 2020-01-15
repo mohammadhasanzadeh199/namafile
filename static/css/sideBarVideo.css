@@ -4,6 +4,18 @@
     padding-left: 24px;
     padding-top: 20px;
 }
+#sideBarVideo .select-all{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 14px 0;
+}
+#sideBarVideo .select-all h6{
+    margin-left: 24px;
+    color: white;
+    font-size: 20px;
+    text-decoration: underline;
+}
 #sideBarVideo .feature{
     width: 100%;
     display: flex;

@@ -179,11 +179,10 @@ __log_key_value_map__ = [
         type:"audio"
     },
     {
-        //no icon
         key:"audio_constant",
-        value:"Audio constant",
-        icon: "&#xe906",
-        type:"video"
+        value:"Audio contrast",
+        icon: "&#xe901",
+        type:"audio"
     },
     {
         //no icon
@@ -192,6 +191,72 @@ __log_key_value_map__ = [
         icon: "&#xe906",
         type:"video"
     },
+    {
+        key:"noise_detection",
+        value:"Loudness range",
+        icon: "&#xe906",
+        type:"video"
+    },
+    {
+        key:"phase_distortion",
+        value:"True peak level",
+        icon: "&#xe906",
+        type:"video"
+    },
+    {
+        key:"phase_coherence",
+        value:"Loudness range",
+        icon: "&#xe906",
+        type:"video"
+    },
+    {
+        key:"clipping_detection",
+        value:"True peak level",
+        icon: "&#xe906",
+        type:"video"
+    },
+    {
+        key:"thdn",
+        value:"Loudness range",
+        icon: "&#xe906",
+        type:"video"
+    },
+    {
+        key:"sinad",
+        value:"True peak level",
+        icon: "&#xe906",
+        type:"video"
+    },
+    {
+        key:"snr",
+        value:"True peak level",
+        icon: "&#xe906",
+        type:"video"
+    },
+    {
+        key:"mos",
+        value:"True peak level",
+        icon: "&#xe906",
+        type:"video"
+    },
+    {
+        key:"duplicate",
+        value:"True peak level",
+        icon: "&#xe906",
+        type:"video"
+    },
+    {
+        key:"clicks_and_pops",
+        value:"True peak level",
+        icon: "&#xe906",
+        type:"video"
+    },
+    {
+        key:"low_luminance",
+        value:"True peak level",
+        icon: "&#xe906",
+        type:"video"
+    }
 ]
 
 
@@ -202,7 +267,6 @@ __log_key_value_map__ = [
 //timeline loader
 //add auto scroll to play.js
 // log system
-// selectiong faetures functionality
 //ui inhanced
 
 

@@ -1,52 +1,52 @@
 let websocket = null;
 
-let send_json = {
-    "Video_addr":"C:\\Users\\Administrator\\namafile\\videos\\video30.mp4",
-    "brightness":"1",
-    "contrast":"0",
-    "chroma":"0",
-    "colorfulness":"0",
-    "color_gamut":"0",
-    "chroma_imbalance":"0",
-    "loss_of_chroma":"0",
-    "blurriness":"0",
-    "blockiness":"0",
-    "noise_estimation":"0",
-    "stripe_noise":"0",
-    "scene_change":"0",
-    "blooming":"0",
-    "frame_freezing":"0",
-    "black_frame":"0",
-    "pillar_boxing":"0",
-    "window_boxing":"0",
-    "letter_boxing":"0",
-    "frame_drop":"0",
-    "photosensitive_epilepsy":"0",
-    "saturated_red_epilepsy":"0",
-    "luminance_change":"0",
-    "momentary_loudness":"0",
-    "integrated_loudness":"0",
-    "shortterm_loudness":"0",
-    "loudness_range":"0",
-    "true_peak_level":"0",
-    "loudness_mismatch":"0",
-    "audio_contrast":"0",
-    "audio_constant":"0",
-    "mute_detection":"0",
-    "noise_detection":"0",
-    "phase_distortion":"0",
-    "phase_coherence":"0",
-    "clipping_detection":"0",
-    "thdn":"0",
-    "sinad":"0",
-    "snr":"0",
-    "mos":"0",
-    "duplicate":"0",
-    "clicks_and_pops":"0",
-    "low_luminance":"0"
-}
+// let send_json = {
+//     "Video_addr":"C:\\Users\\Administrator\\namafile\\videos\\video30.mp4",
+//     "brightness":"1",
+//     "contrast":"0",
+//     "chroma":"0",
+//     "colorfulness":"0",
+//     "color_gamut":"0",
+//     "chroma_imbalance":"0",
+//     "loss_of_chroma":"0",
+//     "blurriness":"0",
+//     "blockiness":"0",
+//     "noise_estimation":"0",
+//     "stripe_noise":"0",
+//     "scene_change":"0",
+//     "blooming":"0",
+//     "frame_freezing":"0",
+//     "black_frame":"0",
+//     "pillar_boxing":"0",
+//     "window_boxing":"0",
+//     "letter_boxing":"0",
+//     "frame_drop":"0",
+//     "photosensitive_epilepsy":"0",
+//     "saturated_red_epilepsy":"0",
+//     "luminance_change":"0",
+//     "momentary_loudness":"0",
+//     "integrated_loudness":"0",
+//     "shortterm_loudness":"0",
+//     "loudness_range":"0",
+//     "true_peak_level":"0",
+//     "loudness_mismatch":"0",
+//     "audio_contrast":"0",
+//     "audio_constant":"0",
+//     "mute_detection":"0",
+//     "noise_detection":"0",
+//     "phase_distortion":"0",
+//     "phase_coherence":"0",
+//     "clipping_detection":"0",
+//     "thdn":"0",
+//     "sinad":"0",
+//     "snr":"0",
+//     "mos":"0",
+//     "duplicate":"0",
+//     "clicks_and_pops":"0",
+//     "low_luminance":"0"
+// }
 
-console.log(JSON.stringify(send_json))
+// console.log(JSON.stringify(send_json))
 
 // ====================================================================================================================
 // ------- websocket handler ------------------------------------------------------------------------------------------
@@ -69,7 +69,21 @@ function init_connection(){
 }
 
 function send_inital_message(){
-    websocket.send("initialize:"+JSON.stringify(send_json));
+    if (__global_features_list__.length){
+        let send_json = {};
+        send_json["Video_addr"] = "C:\\Users\\Administrator\\namafile\\videos\\video30.mp4";
+        for (let i=0; i<__log_key_value_map__.length; i++){
+            let value = "0";
+            if (__global_features_list__.includes(__log_key_value_map__[i].key)){
+                value = "1";
+            }
+            send_json[__log_key_value_map__[i].key] = value;
+        }
+        console.log(JSON.stringify(send_json));
+        websocket.send("initialize:"+JSON.stringify(send_json));
+    } else {
+        alert("first select some features")
+    }
 }
 
 let doFirst = true;
